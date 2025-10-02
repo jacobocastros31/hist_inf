@@ -125,9 +125,9 @@ if st.session_state.analysis_done:
     st.divider()
     st.subheader("📚 ¿Quieres crear una historia?")
     
-    if st.button("✨ Crear historia infantil"):
-        with st.spinner("Creando historia..."):
-            story_prompt = f"Basándote en esta descripción: '{st.session_state.full_response}', crea una historia infantil breve y entretenida. La historia debe ser creativa y apropiada para niños."
+    if st.button("Asistente matematico"):
+        with st.spinner("resolviendo problema"):
+            story_prompt = f"Basándote en esta descripción: '{st.session_state.full_response}', eres un experto en matematicas, resuelve el ejercicio que aparece en la descripción."
             
             story_response = openai.chat.completions.create(
                 model="gpt-4o-mini",
